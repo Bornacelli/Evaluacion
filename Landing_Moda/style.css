@@ -1,0 +1,342 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'nunito';
+}
+
+body {
+    background-color: #f4f4f4;
+}
+header {
+    background-image: url(img/inicio1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+marquee {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+}
+
+span {
+    color: rgb(186, 0, 0);
+    font-weight: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    padding-bottom: 10px;
+    margin-top: -8px;
+}
+
+nav.active{
+    background-color: rgb(153, 153, 171);
+    padding: 1px;
+}
+
+
+ul {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    color: black;
+}
+
+li {
+    color: black;
+}
+
+.sale {
+    color: red;
+    font-weight: 700;
+}
+
+li:hover {
+    color: rgb(189, 189, 189);
+}
+
+.img {
+    padding-top: 5px;
+    margin-right: 20px;
+}
+
+
+button {
+    margin-top: 400px;
+    margin-left: 50%;
+    color: rgb(249, 249, 249);
+    padding: 10px 30px;
+    background-color: rgba(192, 192, 192, 0.289);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+} 
+
+button:hover {
+    background-color: rgb(212, 212, 212);
+    color: #000000;
+}
+
+.nuevos-diseños {
+    width: 90%;;
+    padding: 100px 0;
+    margin: auto;
+}
+
+.nuevos-diseños .titulo-diseños {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #000000;
+
+}
+
+.nuevos-diseños .fila {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.nuevos-diseños .fila .diseño {
+    max-width: 750px;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nuevos-diseños .fila .diseño img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0);
+    object-fit: cover;
+    transition: .5s;
+}
+
+
+.nuevos-diseños .fila .diseño:hover img {
+    filter: grayscale(1);
+}
+
+.nuevos-diseños .fila .diseño .info {
+    position: absolute;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    bottom: -40px;
+    transition: .5s;
+}
+
+.nuevos-diseños .fila .diseño:hover .info {
+    opacity: 1;
+    bottom: 0;
+}
+
+.marcas {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.marcas img {
+    margin: 20px;
+}
+
+.marcas img:hover {
+    cursor: pointer;
+}
+
+.marcas .titulo-marcas {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #000000;
+
+}
+
+
+#contacto {
+    padding: 100px 15px;
+    background-color: #f3f3f3;
+}
+
+#contacto .titulo-seccion {
+    margin-bottom: 20px;
+}
+
+#contacto .contenedor-form {
+    max-width: 500px;
+    margin: auto;
+}
+
+#contacto .contenedor-form .fila {
+    margin-bottom: 15px;
+}
+
+#contacto .contenedor-form input {
+    padding: 20px 0;
+    border-radius: 20px;
+    border: none;
+    border: 1px solid #919191;
+}
+
+#contacto .contenedor-form input::placeholder {
+    padding-left: 20px;
+}
+
+#contacto .contenedor-form select {
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    border: 1px solid #919191;
+    color: #919191;
+}
+
+option {
+    color: #919191;
+}
+
+
+#contacto .contenedor-form .input-full {
+    width: 100%;
+}
+
+#contacto .titulo-seccion {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #000000;
+
+}
+
+#contacto .btn-enviar {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    padding: 10px 15px !important;
+}
+
+#contacto .btn-enviar:hover {
+    background-color: #aeaeae;
+    color: #fff;
+}
+
+.warnings {
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #919191;
+    padding-top: 20px;
+}
+
+#check {
+    display: none;
+}
+
+.checkbtn {
+    display: none;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:767px) {
+
+    .checkbtn {
+        display: block;
+        margin-top: -25px;
+    }
+
+    .img {
+        display: none;
+    }
+
+    nav {
+        height: 20px;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        top: 72px;
+        left: -1000%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 10000000;
+    }
+
+    li {
+        margin-top: 20px;
+    }
+
+    nav ul {
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        flex-direction: row;
+
+    }
+
+    nav ul a li {
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    .nuevos-diseños .fila {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+
+    .nuevos-diseños .titulo-diseños {
+        text-align: center;
+        font-size: 22px;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 30px;
+    
+    }
+
+    .nuevos-diseños .fila .diseño {
+        max-width: 750px;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    button {
+        margin-top: 400px;
+        margin-left: 40%;
+        color: rgb(249, 249, 249);
+        padding: 10px 30px;
+        background-color: rgba(192, 192, 192, 0.289);
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 5px;
+    } 
+
+}
